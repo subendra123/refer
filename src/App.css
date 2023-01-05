@@ -1,38 +1,403 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  --bg: #E2E2E3;
+  --canvas: #ffffffdd;
+  --text: #252530;
+  --textMuted: #505058;
+  --bluetext_color:#9403fc;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", serif;
+}
+body {
+  background-color:var(--canvas);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+.grid {
+  display: grid;
+}
+.grid_2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid_4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+header {
+ 
+  padding: 0 20px;
+ 
+}
+
+.flex_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.flex_container .logo {
+
+  display: flex;
+  padding: 0 5px;
+}
+.flex_container .logo i {
+  font-size: 40px;
+  color: blue;
+  padding-right: 7px;
+}
+.flex_container .logo h3 {
+  padding-top: 8px;
+  font-size: 18px;
+}
+.right_side_content {
+  
+  padding: 10px 5px;
+
+}
+.menu_style {
+  padding: 0 20px;
+}
+.menu_style a {
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.profile {
+  margin-left: 10px;
+}
+.icon_profile {
+  padding: 0 5px;
+}
+.icon_profile i  {
+  
+}
+.icon_profile .user {
+  color: white;
+  padding-right: 2px;
+  font-size: 16px;
+}
+.icon_profile .roundedbox {
+  width: 20px;
+  height: 20px;
+  background-color: var(--bluetext_color);
+  border-radius: 100%;
+  padding: 1px;
+  margin-right: 2px;
+}
+.icon_profile h5 {
+  font-weight: bold;
+  font-size: 15px;
+  padding-right: 5px;
+
+
+}
+.icon_profile .arrow {
+  cursor: pointer;
+}
+
+/* HEADER RESPONSIVE */
+
+@media screen and (max-width: 568px) {
+  header {
+    background-color: red;
+  }
+ .menu_style {
+  display: none;
+ }
+ .flex_container .logo {
+
+  display: flex;
+  padding: 0 2px;
+}
+.flex_container .logo i {
+  font-size: 40px;
+  color: blue;
+  padding-right: 0px;
+}
+
+}
+
+/* HEADER END */
+
+/* MAIN START */
+main {
+  /* background-color:var(--canvas); */
+ 
+  margin-top: 1.5rem;
+  padding: 0 7rem;
+  max-width: 140rem;
+  width: 100%;
+}
+section {
+  /* background-color: crimson; */
+  width: 97%;
+  padding: 5px;
+}
+section .upper_text {
+  font-size: 16px;
+  color: var(--text);
+  padding-bottom: 2rem;
+}
+.refer_code  p{
+padding-bottom: 0.8rem;
+color: var(--bluetext_color)
+
+}
+.refer_code a {
+  text-decoration: none;
+  letter-spacing: 10px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border: 0.5px solid gray;
+  border-radius: 4px;
+  
+}
+.walet_balance {
+  background-color:#ffffffdd;
+ padding: 10px;
+ border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.walet_balance p{
+  color: var(--bluetext_color);
+  padding-bottom: 4px;
+}
+.walet_balance a {
+  text-decoration: none;
+  font-size: 20px;
+  
+}
+.walet_balance span {
+  font-weight: bold;
+  color: black;
+}
+
+/* CARD SECTION START */
+
+.card_section {
+  
+  margin-top: 1rem;
+  width: 90%;
+ 
+}
+.card {
+  
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 7px 0;
+
+  width: 300px;
+  background: linear-gradient(150deg, #f731db, #4600f1 100%);
+ 
+}
+.section_title {
+  margin: 1rem 0;
+}
+.section_title h2 {
+  font-size: 16px;
+  color: var(--bluetext_color);
+}
+.card_header {
+  padding: 8px;
+  
+}
+.card_header h4 {
+  font-size: 17px;
+  font-weight: bold;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.card_header p {
+  font-size: 15px;
+  color: white;
+  font-weight: normal;
+}
+.cart_title {
+  color: white;
+  font-size: 16px;
+  padding: 8px 0;
+}
+.card_inner_btn button{
+  padding: 6px;
+  border-radius: 120px;
+  border: none;
+  outline: none;
+  margin:  5px 5px;
+  background:none;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.card_inner_btn button:hover {
+  background-color: whitesmoke;
+  color: var(--text);
+text-transform: uppercase;
+font-weight: 700;
+  
+}
+.card_footer {
+  margin: 0.8rem 0;
+}
+.card_footer p {
+  padding: 0 7px;
+  font-size: 16px;
+  color: white;
+}
+.card_footer p span {
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+.section_footer {
+  margin: 3rem 1rem;
+  font-size: 17px;
+  color: var(--bluetext_color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*   card responsive */
+/* 
+@media screen and (max-width: 320px)  {
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr;
+    
   }
-  to {
-    transform: rotate(360deg);
+  main {
+    padding: 5px -10px;
+    margin-left: 1rem;
   }
+  
+  
 }
+@media screen and (max-width: 480px)  {
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+  main {
+    padding: 5px 20px;
+  }
+  
+}
+
+
+@media screen and (max-width: 768px)  {
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  main {
+    padding: 5px 20px;
+  }
+  .card {
+    margin: 5px 6px;
+  }
+  
+}
+
+@media screen and (max-width: 992px)  {
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  main {
+    padding: 5px 20px;
+  }
+  .card {
+    margin: 5px 6px;
+  }
+  
+}
+
+@media screen and (max-width: 1200px)  {
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  main {
+    padding: 5px 20px;
+  }
+  .card {
+    margin: 5px 6px;
+  }
+  
+} */
+
+
+
+
+
+@media screen and (min-width: 220px) and (max-width:680px) {
+
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+  main {
+    padding: 5px 20px;
+  }
+  .card {
+    margin: 5px 6px;
+  }
+  
+}
+
+@media screen and (min-width: 681px) and (max-width:992px) {
+
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+  main {
+    padding: 5px 20px;
+  }
+  .card {
+    margin: 5px 6px;
+  }
+  
+}
+
+@media screen and (min-width: 993px) and (max-width:1280px) {
+
+  .card_style {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+  main {
+    padding: 5px 20px;
+  }
+  .card {
+    margin: 5px 10px;
+    background-color: red;
+  }
+  
+}
+  
+
+
+
